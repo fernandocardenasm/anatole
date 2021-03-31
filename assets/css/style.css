@@ -339,14 +339,14 @@ a:active {
 }
 
 .post .post-title h1 {
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-size: 30px;
     letter-spacing: 5px;
     line-height: 1;
 }
 
 .post .post-title h2 {
-    text-transform: uppercase;
+    text-transform: capitalize;
     letter-spacing: 1px;
     font-size: 28px;
     line-height: 1;
@@ -355,7 +355,7 @@ a:active {
 }
 
 .post .post-title h3 {
-    text-transform: uppercase;
+    text-transform: capitalize;
     letter-spacing: 1px;
     line-height: 1;
     font-weight: 600;
