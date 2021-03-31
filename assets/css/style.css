@@ -292,7 +292,7 @@ a:active {
 }
 
 .sidebar .logo-title .title h3 {
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-size: 2rem;
     font-weight: bold;
     letter-spacing: 2px;
