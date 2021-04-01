@@ -48,6 +48,10 @@ body {
     background-color: var(--bg-color);
 }
 
+ul {
+    line-height: 1.9em;
+}
+
 p {
     line-height: 1.9em;
     font-weight: 400;
