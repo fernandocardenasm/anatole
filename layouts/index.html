@@ -43,9 +43,12 @@
                             <span class="date">{{ if isset .Site.Params "indexdateformat" }}
                                                  {{ .Date.Format .Site.Params.indexDateFormat }}
                                              {{ else }} {{.Date.Format "Mon, Jan 2, 2006"}}
-                                             {{ end }}</span>
+                                             {{ end }}
+                            </span>
                         {{ with .Page.Params.Categories }}{{ partial "taxonomy/categories.html" . }}{{ end }}
                         {{ with .Page.Params.Tags }}{{ partial "taxonomy/tags.html" . }}{{ end }}
+                        <em class="fas fa-stopwatch"></em>
+                        <span class="reading-time">{{ i18n "reading_time" .ReadingTime }}</span>
                     </div>
                 </div>
             </div>
