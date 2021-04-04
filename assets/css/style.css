@@ -366,6 +366,7 @@ a:active {
     /* color: #464646; */
     color: var(--heading-color);
     font-size: 22px;
+    line-height: 1.9em;
     margin: 0;
 }
 
