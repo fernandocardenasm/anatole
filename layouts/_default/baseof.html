@@ -3,15 +3,29 @@
 {{- partial "head.html" . -}}
 <body>
 
-{{- partial "sidebar.html" . -}}
-<div class="main">
-    {{ partial "navbar.html" . }}
-    <div class="autopagerize_page_element">
-        <div class="content">
-            {{- block "main" . }}{{- end }}
+{{ if .IsHome }}
+    {{- partial "sidebar.html" . -}}
+    <div class="main">
+        {{ partial "navbar.html" . }}
+        <div class="autopagerize_page_element">
+            <div class="content">
+                {{- block "main" . }}{{- end }}
+            </div>
         </div>
     </div>
-</div>
+{{ else }}
+    <div class="sidebar_not_home">
+        {{- partial "sidebar.html" . -}}
+    </div>
+    <div class="main">
+        {{ partial "navbar.html" . }}
+        <div class="autopagerize_page_element">
+            <div class="content_not_home">
+                {{- block "main" . }}{{- end }}
+            </div>
+        </div>
+    </div>
+{{- end -}}
 
 {{- partial "footer.html" . -}}
 {{- if (eq .Site.Params.simpleAnalytics.enable true) -}}
