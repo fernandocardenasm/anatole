@@ -188,6 +188,13 @@ a:active {
     margin-top: 60px;
 }
 
+.content_not_home {
+    height: auto;
+    float: right;
+    width: 60%;
+    margin-top: 60px;
+}
+
 .page-top {
     width: 60%;
     position: fixed;
@@ -276,9 +283,25 @@ a:active {
     min-height: 100%;
 }
 
+.sidebar_not_home {
+    width: 40%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-color: var(--bg-color);
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 4;
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
 .sidebar .logo-title {
     text-align: center;
-    padding-top: 240px;
+    padding-top: 120px;
     flex: 1;
 }
 
@@ -929,7 +952,18 @@ print {
         width: 100%;
         z-index: 2;
         position: relative;
-        margin-top: -1 * var(--navbar-burger-height);
+        margin-top: calc(0.1 * var(--navbar-burger-height));
+    }
+
+    .sidebar_not_home {
+        display: none;
+    }
+
+    .content_not_home {
+        width: 100%;
+        z-index: 2;
+        position: relative;
+        margin-top: calc( 1.5 * var(--navbar-burger-height));
     }
 
     .post figure.right {
@@ -1090,7 +1124,15 @@ print {
         padding-right: 25%;
         width: 35%;
     }
+    .content_not_home {
+        padding-right: 25%;
+        width: 35%;
+    }
     .sidebar {
+        padding-left: 15%;
+        width: 25%;
+    }
+    .sidebar_not_home {
         padding-left: 15%;
         width: 25%;
     }
