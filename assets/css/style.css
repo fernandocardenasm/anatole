@@ -921,7 +921,7 @@ print {
         width: 100%;
         z-index: 2;
         position: relative;
-        margin-top: -1 * var(--navbar-burger-height);;
+        margin-top: -1 * var(--navbar-burger-height);
     }
 
     .post figure.right {
