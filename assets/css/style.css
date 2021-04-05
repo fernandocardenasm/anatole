@@ -913,6 +913,14 @@ print {
         top: 0;
     }
 
+    .post {
+        background-color: var(--bg-color);
+        margin-top: 1.5em;
+        margin-left: 1.3em;
+        margin-right: 1.3em;
+        margin-bottom: 1.5em;
+    }    
+
     .post-title h3 {
         line-height: 1.6;
     }
