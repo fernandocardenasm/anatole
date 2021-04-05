@@ -15,6 +15,7 @@
     --blockquote-text-color: #858585;
     --blockquote-border-color: #dfe2e5;
     --thumbnail-height: 15em;
+    --navbar-burger-height: 3.25rem;
     scroll-padding-top: 100px;
 }
 
@@ -889,7 +890,7 @@ a.btn {
 print {
     .sidebar {
         width: 100%;
-        position: absolute;
+        position: relative;
         border-right: none;
         z-index: 1;
     }
@@ -908,6 +909,8 @@ print {
 
     .page-top {
         width: 100%;
+        position: fixed;
+        top: 0;
     }
 
     .post-title h3 {
@@ -915,10 +918,10 @@ print {
     }
 
     .content {
-        margin-top: 420px;
         width: 100%;
         z-index: 2;
-        position: absolute;
+        position: relative;
+        margin-top: -1 * var(--navbar-burger-height);;
     }
 
     .post figure.right {
@@ -949,6 +952,8 @@ print {
         width: 100%;
         display: none;
         margin-top: 0px;
+        position: fixed;
+        top: var(--navbar-burger-height);
     }
 
     .page-top .nav.is-active {
@@ -975,10 +980,13 @@ print {
     .navbar-burger {
         cursor: pointer;
         display: block;
-        height: 3.25rem;
+        height: var(--navbar-burger-height);
         position: relative;
         width: 3.25rem;
         margin-left: auto;
+        position: fixed;
+        top: 0;
+        right: 0;
     }
 
     .navbar-burger span {
