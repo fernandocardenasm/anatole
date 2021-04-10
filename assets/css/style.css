@@ -14,6 +14,12 @@
     --tag-color: #424242;
     --blockquote-text-color: #858585;
     --blockquote-border-color: #dfe2e5;
+    --cta-color: #5f5f5f;
+    --primary-button-background-color: #5f5f5f;
+    --primary-button-color: #f9f9fd;
+    --secondary-button-background-color: #f9f9fd;
+    --secondary-button-color: #5f5f5f;
+    --subscribe-input-border-color: #858585;
     --thumbnail-height: 15em;
     --navbar-burger-height: 3.25rem;
     scroll-padding-top: 100px;
@@ -33,6 +39,12 @@ html[data-theme='dark'] {
     --tag-color: rgb(191, 191, 191);
     --blockquote-text-color: #808080;
     --blockquote-border-color: #424242;
+    --cta-color: #f9f9fd;
+    --primary-button-background-color: #dfe2e5;
+    --primary-button-color: #292a2d;
+    --secondary-button-background-color: #292a2d;
+    --secondary-button-color: #dfe2e5;
+    --subscribe-input-border-color: #dfe2e5;
 }
 
 html {
@@ -88,6 +100,13 @@ blockquote {
     font-size: 15px;
     line-height: 1;
     margin: 5px 8px 5px 0;
+}
+
+.tag:hover,
+.category:hover {
+	text-shadow: none!important;
+	transform: translate(1px, 2px)!important;
+	box-shadow: none!important
 }
 
 pre {
@@ -281,6 +300,7 @@ a:active {
     display: flex;
     flex-direction: column;
     min-height: 100%;
+    display: inline;
 }
 
 .sidebar_not_home {
@@ -297,11 +317,12 @@ a:active {
     display: flex;
     flex-direction: column;
     min-height: 100%;
+    display: inline;
 }
 
 .sidebar .logo-title {
     text-align: center;
-    padding-top: 120px;
+    padding-top: 60px;
     flex: 1;
 }
 
@@ -341,6 +362,7 @@ a:active {
     font-size: 14px;
     text-align: center;
     flex: 7;
+    padding-top: 1em;
 }
 
 .sidebar .social-links i {
@@ -607,7 +629,7 @@ a:active {
     clear: both;
     text-align: center;
     font-size: 10px;
-    margin: 0 auto;
+    margin: 2em auto;
     bottom: 0;
     width: 100%;
     padding-bottom: 20px;
@@ -655,7 +677,6 @@ a:active {
 }
 
 .list-with-title .listing .listing-post .post-time {
-    float: right;
     display: inline-block;
     max-width: 10%;
     text-align: right;
@@ -1131,13 +1152,166 @@ print {
     .sidebar {
         padding-left: 15%;
         width: 25%;
+        padding-top: 10em;
     }
     .sidebar_not_home {
         padding-left: 15%;
         width: 25%;
+        padding-top: 10em;
     }
 }
 
+
+button,
+.button,
+.button:hover {
+	font-size: calc(var(--font-size) * var(--scale));
+	font-family: var(--font-family)
+}
+
+.container,
+.form-container {
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	margin: 0 auto;
+	width: 100%;
+    display: inline;
+}
+
+.form-container {
+	min-height: 3em
+}
+
+.primary {
+	background-color: var(--primary-button-background-color)!important;
+	color: var(--primary-button-color)!important;
+    border: none;
+    line-height: 1.6em;
+}
+
+.secondary {
+    background-color: var(--body-background-color)!important;
+	border: 2px solid var(--secondary-button-color)!important;
+	color: var(--secondary-button-color)!important;
+    line-height: 1.6em;
+}
+
+button,
+.button,
+.button:hover {
+	color: var(--cta-color);
+	height: 1.8em;
+	padding: 0 .5em;
+	margin: .25em;
+	display: inline-block;
+	text-align: center;
+	border: 2px solid var(--cta-color);
+	border-radius: 8px;
+	font-weight: 600
+}
+
+button:hover,
+.button:hover {
+	text-shadow: none!important;
+	transform: translate(1px, 2px)!important;
+	box-shadow: none!important
+}
+
+/* Were added for the form newsletter, doesnt look to have any effect */
+/* a {
+	color: var(--link-color);
+	-webkit-text-decoration-line: none;
+	text-decoration-line: none;
+	-webkit-text-decoration-style: initial;
+	text-decoration-style: initial;
+	-webkit-text-decoration-color: initial;
+	text-decoration-color: initial;
+	font-weight: 600;
+	background: 0 0;
+	transition: all 150ms
+} */
+
+/* a:hover {
+	border-bottom: 3px solid var(--link-hover-underline)
+} */
+
+form {
+	height: 2em
+}
+
+input {
+	color: var(--content-text-color);
+	background-color: var(--input-background-color);
+	font-size: 14px;
+	border-radius: 8px;
+	border: 2px solid var(--border-color);
+	box-shadow: 3px 4px 0 var(--shadow);
+	height: 30px;
+	padding: 0 .5em;
+}
+
+input:focus {
+	outline: -webkit-focus-ring-color auto 1px;
+	outline-offset: -1px
+}
+
+fieldset {
+	border: none;
+	margin: .5rem 0;
+	display: block;
+}
+
+@media screen and (max-width:960px) {
+    .form-container {
+        height: 12em;
+    }
+}
+
+@media screen and (min-width:960px) {
+	.form-row {
+		padding: 0 0 0!important;
+		align-items: flex-start;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+	}
+}
+
+#subscribe {
+	width: 100%;
+	margin-bottom: 0em;
+	justify-content: center;
+    height: fit-content;
+}
+
+#subscribe input {
+	color: var(--input-color);
+    border-color: var(--subscribe-input-border-color);
+    border-width: 0.13em;
+}
+
+#subscribe button,
+#subscribe .button {
+	cursor: pointer
+}
+
+@media screen and (min-width:960px) {
+	#subscribe {
+		width: auto;
+		height: auto!important;
+		margin-bottom: 0
+	}
+}
+
+/* Disable for now placing email input and rss button in one row */
+.form-row {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: center;
+	padding: 0em;
+	border: none
+}
 
 /* (CONTACT) FORM */
 
@@ -1168,7 +1342,7 @@ print {
     border: 1px solid var(--form-border-color);
     color: var(--body-color);
 }
-.form-style ul li    .field-style:focus {
+.form-style ul li .field-style:focus {
     box-shadow: 0 0 5px;
     border:1px solid;
 }
