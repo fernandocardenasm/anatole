@@ -98,6 +98,13 @@ blockquote {
     margin: 5px 8px 5px 0;
 }
 
+.tag:hover,
+.category:hover {
+	text-shadow: none!important;
+	transform: translate(1px, 2px)!important;
+	box-shadow: none!important
+}
+
 pre {
     background-color: var(--pre-bg-color);
     padding: 5px;
