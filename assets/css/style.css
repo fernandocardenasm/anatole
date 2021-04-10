@@ -14,6 +14,9 @@
     --tag-color: #424242;
     --blockquote-text-color: #858585;
     --blockquote-border-color: #dfe2e5;
+    --cta-color: #5f5f5f;
+    --primary-button-background-color: #5f5f5f;
+    --primary-button-color: #f9f9fd;
     --thumbnail-height: 15em;
     --navbar-burger-height: 3.25rem;
     scroll-padding-top: 100px;
@@ -33,6 +36,9 @@ html[data-theme='dark'] {
     --tag-color: rgb(191, 191, 191);
     --blockquote-text-color: #808080;
     --blockquote-border-color: #424242;
+    --cta-color: #f9f9fd;
+    --primary-button-background-color: #f9f9fd;
+    --primary-button-color: #5f5f5f;
 }
 
 html {
@@ -301,7 +307,7 @@ a:active {
 
 .sidebar .logo-title {
     text-align: center;
-    padding-top: 120px;
+    padding-top: 40px;
     flex: 1;
 }
 
@@ -1138,6 +1144,179 @@ print {
     }
 }
 
+
+button,
+.button,
+.button:hover {
+	font-size: calc(var(--font-size) * var(--scale));
+	font-family: var(--font-family)
+}
+
+.container,
+.form-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	margin: 0 auto;
+	width: 100%
+}
+
+.form-container {
+	min-height: 3em
+}
+
+.primary {
+	background-color: var(--primary-button-background-color)!important;
+	color: var(--primary-button-color)!important;
+    border: none;
+}
+
+.secondary {
+	background-color: var(--body-background-color)!important;
+    line-height: 1.6
+}
+
+@media(prefers-color-scheme:dark) {
+	.secondary {
+		border: 2px solid var(--cta-color)!important;
+		color: var(--cta-color)!important
+	}
+}
+
+/*
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box
+}
+*/
+
+body {
+	background: var(--body-background-color);
+}
+
+button,
+.button,
+.button:hover {
+	color: var(--content-text-color);
+	height: 1.8em;
+	padding: 0 .5em;
+	margin: .25em;
+	display: inline-block;
+	text-align: center;
+	box-shadow: 3px 4px 0 var(--shadow);
+	border: 2px solid var(--border-color);
+	border-radius: 8px;
+	font-weight: 600
+}
+
+button:hover,
+.button:hover {
+	text-shadow: none!important;
+	transform: translate(1px, 2px)!important;
+	box-shadow: none!important
+}
+
+a {
+	color: var(--link-color);
+	-webkit-text-decoration-line: none;
+	text-decoration-line: none;
+	-webkit-text-decoration-style: initial;
+	text-decoration-style: initial;
+	-webkit-text-decoration-color: initial;
+	text-decoration-color: initial;
+	font-weight: 600;
+	background: 0 0;
+	transition: all 150ms
+}
+
+a:hover {
+	border-bottom: 3px solid var(--link-hover-underline)
+}
+
+form {
+	height: 2em
+}
+
+input {
+	color: var(--content-text-color);
+	background-color: var(--input-background-color);
+	font-size: 14px;
+	border-radius: 8px;
+	border: 2px solid var(--border-color);
+	box-shadow: 3px 4px 0 var(--shadow);
+	height: 30px;
+	padding: 0 .5em;
+}
+
+input:focus {
+	outline: -webkit-focus-ring-color auto 1px;
+	outline-offset: -1px
+}
+
+fieldset {
+	border: none;
+	margin: .5rem 0;
+	display: block
+}
+
+.form-row {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding: 1em;
+	border: none;
+}
+
+@media screen and (max-width:960px) {
+    .form-container {
+        height: 12em;
+    }
+}
+
+@media screen and (min-width:960px) {
+	.form-row {
+		padding: 1em 0 0!important;
+		align-items: flex-start;
+		flex-flow: row wrap;
+		justify-content: flex-end
+	}
+}
+
+#subscribe {
+	width: 100%;
+	height: 12em;
+	margin-bottom: 2em;
+	justify-content: center
+}
+
+#subscribe input {
+	color: var(--input-color)
+}
+
+#subscribe button,
+#subscribe .button {
+	cursor: pointer
+}
+
+@media screen and (min-width:960px) {
+	#subscribe {
+		width: auto;
+		height: auto!important;
+		margin-bottom: 0
+	}
+}
+
+/* Disable for now placing email input and rss button in one row */
+.form-row {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: center;
+	padding: 1em;
+	border: none
+}
 
 /* (CONTACT) FORM */
 
