@@ -1183,11 +1183,12 @@ button,
 	background-color: var(--primary-button-background-color)!important;
 	color: var(--primary-button-color)!important;
     border: none;
+    line-height: 1.6em;
 }
 
 .secondary {
 	background-color: var(--body-background-color)!important;
-    line-height: 1.6
+    line-height: 1.6em;
 }
 
 @media(prefers-color-scheme:dark) {
