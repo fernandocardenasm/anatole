@@ -18,7 +18,7 @@
     --primary-button-background-color: #5f5f5f;
     --primary-button-color: #f9f9fd;
     --secondary-button-background-color: #f9f9fd;
-    --secondary-button-color: #2c2d32;
+    --secondary-button-color: #5f5f5f;
     --subscribe-input-border-color: #858585;
     --thumbnail-height: 15em;
     --navbar-burger-height: 3.25rem;
@@ -40,11 +40,11 @@ html[data-theme='dark'] {
     --blockquote-text-color: #808080;
     --blockquote-border-color: #424242;
     --cta-color: #f9f9fd;
-    --primary-button-background-color: #f9f9fd;
+    --primary-button-background-color: #dfe2e5;
     --primary-button-color: #292a2d;
     --secondary-button-background-color: #292a2d;
-    --secondary-button-color: #f9f9fd;
-    --subscribe-input-border-color: #f9f9fd;
+    --secondary-button-color: #dfe2e5;
+    --subscribe-input-border-color: #dfe2e5;
 }
 
 html {
